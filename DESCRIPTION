@@ -1,17 +1,17 @@
 Package: MethodOfFragments
 Type: Package
-Date: 2023-01-13
+Date: 2023-09-12
 License: GPL-3
 Title: Space-Time disaggregation of daily Precipitation using the method of fragments
 Version: 1.0.0
 Authors@R: c(person("Guillaume","Evin",role = c("aut", "cre"),email="guillaume.evin@inrae.fr"))
 Author: Guillaume Evin [aut, cre]
 Maintainer: Guillaume Evin <guillaume.evin@inrae.fr>
-Imports: stats
+Imports: stats, Rdpack
 Description: Space-Time disaggregation of daily Precipitation using the method of fragments:
   - Breinl, K., G. Di Baldassarre. (2018) <10.1016/j.ejrh.2018.12.002>.
 Depends: R (>= 2.10)
+RdMacros: Rdpack
 Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 NeedsCompilation: yes
