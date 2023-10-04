@@ -18,7 +18,7 @@
 ###===============================###===============================###
 
 ###===============================###===============================###
-#' disag.3D.to.1D
+#' disagD2H
 #'
 #' This function applies the method of fragments to disaggregate daily simulations
 #' of precipitation, as done in several papers, e.g.
@@ -37,7 +37,7 @@
 #' \insertAllCited{}
 #' @export
 #' @author Guillaume Evin
-disag.3D.to.1D = function(YObs1H, # matrix of observed intensities at 1h: (nTobs*24) x nStation
+disagD2H = function(YObs1H, # matrix of observed intensities at 1h: (nTobs*24) x nStation
   YObs24H, # matrix of observed intensities at 24h: nTobs x nStation
   YSim24H, # matrix of simulated intensities per 3-day period: nTsim x nStation
   timeObs24H, # vector of time corresponding to YObs24H
