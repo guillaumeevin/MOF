@@ -25,11 +25,19 @@ find_row <- function(m, v) {
     .Call(`_MethodOfFragments_find_row`, m, v)
 }
 
+getrmseiPrec <- function(Npdt, mObs, mSim, cObs, cSim, Yobs24, Ysim24, i, nLagScore) {
+    .Call(`_MethodOfFragments_getrmseiPrec`, Npdt, mObs, mSim, cObs, cSim, Yobs24, Ysim24, i, nLagScore)
+}
+
 getrmseiTemp <- function(Npdt, mObs, mSim, Yobs24, Ysim24, i) {
     .Call(`_MethodOfFragments_getrmseiTemp`, Npdt, mObs, mSim, Yobs24, Ysim24, i)
 }
 
 disagTempMOF <- function(Npdt, mObs, mSim, YobsXX, Yobs24, Ysim24) {
     .Call(`_MethodOfFragments_disagTempMOF`, Npdt, mObs, mSim, YobsXX, Yobs24, Ysim24)
+}
+
+disagPrecMOF <- function(Npdt, mObs, mSim, cObs, cSim, YobsXX, Yobs24, Ysim24, nLagScore) {
+    .Call(`_MethodOfFragments_disagPrecMOF`, Npdt, mObs, mSim, cObs, cSim, YobsXX, Yobs24, Ysim24, nLagScore)
 }
 

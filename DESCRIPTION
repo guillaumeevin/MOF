@@ -1,9 +1,9 @@
 Package: MethodOfFragments
 Type: Package
-Date: 2024-06-03
+Date: 2024-11-13
 License: GPL-3
-Title: Space-Time disaggregation of daily Precipitation using the method of fragments
-Version: 1.1.0
+Title: Space-Time disaggregation of daily Precipitation and Temperature using the method of fragments
+Version: 1.2.0
 Authors@R: c(person("Guillaume","Evin",role = c("aut", "cre"),email="guillaume.evin@inrae.fr"))
 Author: Guillaume Evin [aut, cre]
 Maintainer: Guillaume Evin <guillaume.evin@inrae.fr>

@@ -79,6 +79,25 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// getrmseiPrec
+NumericVector getrmseiPrec(int Npdt, IntegerVector mObs, IntegerVector mSim, IntegerVector cObs, IntegerVector cSim, NumericMatrix Yobs24, NumericMatrix Ysim24, int i, int nLagScore);
+RcppExport SEXP _MethodOfFragments_getrmseiPrec(SEXP NpdtSEXP, SEXP mObsSEXP, SEXP mSimSEXP, SEXP cObsSEXP, SEXP cSimSEXP, SEXP Yobs24SEXP, SEXP Ysim24SEXP, SEXP iSEXP, SEXP nLagScoreSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type Npdt(NpdtSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type mObs(mObsSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type mSim(mSimSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type cObs(cObsSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type cSim(cSimSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type Yobs24(Yobs24SEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type Ysim24(Ysim24SEXP);
+    Rcpp::traits::input_parameter< int >::type i(iSEXP);
+    Rcpp::traits::input_parameter< int >::type nLagScore(nLagScoreSEXP);
+    rcpp_result_gen = Rcpp::wrap(getrmseiPrec(Npdt, mObs, mSim, cObs, cSim, Yobs24, Ysim24, i, nLagScore));
+    return rcpp_result_gen;
+END_RCPP
+}
 // getrmseiTemp
 NumericVector getrmseiTemp(int Npdt, IntegerVector mObs, IntegerVector mSim, NumericMatrix Yobs24, NumericMatrix Ysim24, int i);
 RcppExport SEXP _MethodOfFragments_getrmseiTemp(SEXP NpdtSEXP, SEXP mObsSEXP, SEXP mSimSEXP, SEXP Yobs24SEXP, SEXP Ysim24SEXP, SEXP iSEXP) {
@@ -111,6 +130,25 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// disagPrecMOF
+List disagPrecMOF(int Npdt, IntegerVector mObs, IntegerVector mSim, IntegerVector cObs, IntegerVector cSim, NumericMatrix YobsXX, NumericMatrix Yobs24, NumericMatrix Ysim24, int nLagScore);
+RcppExport SEXP _MethodOfFragments_disagPrecMOF(SEXP NpdtSEXP, SEXP mObsSEXP, SEXP mSimSEXP, SEXP cObsSEXP, SEXP cSimSEXP, SEXP YobsXXSEXP, SEXP Yobs24SEXP, SEXP Ysim24SEXP, SEXP nLagScoreSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type Npdt(NpdtSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type mObs(mObsSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type mSim(mSimSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type cObs(cObsSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type cSim(cSimSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type YobsXX(YobsXXSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type Yobs24(Yobs24SEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type Ysim24(Ysim24SEXP);
+    Rcpp::traits::input_parameter< int >::type nLagScore(nLagScoreSEXP);
+    rcpp_result_gen = Rcpp::wrap(disagPrecMOF(Npdt, mObs, mSim, cObs, cSim, YobsXX, Yobs24, Ysim24, nLagScore));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_MethodOfFragments_matrixSubcol", (DL_FUNC) &_MethodOfFragments_matrixSubcol, 4},
@@ -119,8 +157,10 @@ static const R_CallMethodDef CallEntries[] = {
     {"_MethodOfFragments_any_sug", (DL_FUNC) &_MethodOfFragments_any_sug, 1},
     {"_MethodOfFragments_all_sug", (DL_FUNC) &_MethodOfFragments_all_sug, 1},
     {"_MethodOfFragments_find_row", (DL_FUNC) &_MethodOfFragments_find_row, 2},
+    {"_MethodOfFragments_getrmseiPrec", (DL_FUNC) &_MethodOfFragments_getrmseiPrec, 9},
     {"_MethodOfFragments_getrmseiTemp", (DL_FUNC) &_MethodOfFragments_getrmseiTemp, 6},
     {"_MethodOfFragments_disagTempMOF", (DL_FUNC) &_MethodOfFragments_disagTempMOF, 6},
+    {"_MethodOfFragments_disagPrecMOF", (DL_FUNC) &_MethodOfFragments_disagPrecMOF, 9},
     {NULL, NULL, 0}
 };
 
